@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinaria PetCare - Registro de Mascota</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="fas fa-paw me-2"></i> <span>PetCare</span>
+                </a>
+            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sistema
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="registro-mascota.html">Registro de Mascota</a></li>
+                                <li><a class="dropdown-item" href="historial-medico.html">Historial Médico</a></li>
+                                <li><a class="dropdown-item" href="inventario.html">Inventario</a></li>
+                                <li><a class="dropdown-item" href="pagos.html">Pagos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-dark btn-sm ms-lg-2 px-3" href="citas.html">Agendar Cita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-user me-1"></i>Iniciar Sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Encabezado de página -->
+    <header class="bg-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Registro de Mascota</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-5 fw-bold">Registro de Mascota</h1>
+                    <p class="lead">Registra a tu mascota en nuestro sistema para llevar un mejor control de su salud y tratamientos.</p>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="img/mascotas-felices.jpg" alt="Mascotas felices" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Información lateral -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <!-- Tarjeta de información -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h2 class="h5 mb-0"><i class="fas fa-info-circle me-2"></i>Información Importante</h2>
+                        </div>
+                        <div class="card-body p-4">
+                            <p>Al registrar a tu mascota en nuestro sistema, podrás:</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0">
+                                    <i class="fas fa-check-circle text-success me-2"></i>Acceder a su historial médico completo
+                                </li>
+                                <li class="list-group-item px-0">
+                                    <i class="fas fa-check-circle text-success me-2"></i>Recibir recordatorios de vacunación
+                                </li>
+                                <li class="list-group-item px-0">
+                                    <i class="fas fa-check-circle text-success me-2"></i>Agendar citas más fácilmente
+                                </li>
+                                <li class="list-group-item px-0">
+                                    <i class="fas fa-check-circle text-success me-2"></i>Obtener recomendaciones personalizadas
+                                </li>
+                                <li class="list-group-item px-0">
+                                    <i class="fas fa-check-circle text-success me-2"></i>Acceder a descuentos especiales
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta de ayuda -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h2 class="h5 mb-0"><i class="fas fa-question-circle me-2"></i>¿Necesitas Ayuda?</h2>
+                        </div>
+                        <div class="card-body p-4">
+                            <p>Si tienes dudas sobre el registro de tu mascota, puedes:</p>
+                            <div class="d-grid gap-2">
+                                <a href="contacto.html" class="btn btn-outline-primary">
+                                    <i class="fas fa-envelope me-2"></i>Contactar con Soporte
+                                </a>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#helpModal">
+                                    <i class="fas fa-question-circle me-2"></i>Preguntas Frecuentes
+                                </button>
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <p class="mb-1"><i class="fas fa-phone me-2"></i>Llámanos:</p>
+                                <p class="fw-bold">(123) 456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulario de registro -->
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h2 class="h5 mb-0"><i class="fas fa-paw me-2"></i>Formulario de Registro</h2>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Pestañas de navegación -->
+                            <ul class="nav nav-tabs mb-4" id="registroTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="propietario-tab" data-bs-toggle="tab" data-bs-target="#propietario" type="button" role="tab" aria-controls="propietario" aria-selected="true">
+                                        <i class="fas fa-user me-2"></i>Propietario
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="mascota-tab" data-bs-toggle="tab" data-bs-target="#mascota" type="button" role="tab" aria-controls="mascota" aria-selected="false">
+                                        <i class="fas fa-paw me-2"></i>Mascota
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="salud-tab" data-bs-toggle="tab" data-bs-target="#salud" type="button" role="tab" aria-controls="salud" aria-selected="false">
+                                        <i class="fas fa-heartbeat me-2"></i>Salud
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="confirmacion-tab" data-bs-toggle="tab" data-bs-target="#confirmacion" type="button" role="tab" aria-controls="confirmacion" aria-selected="false">
+                                        <i class="fas fa-check-circle me-2"></i>Confirmación
+                                    </button>
+                                </li>
+                            </ul>
+                            
+                            <!-- Contenido de las pestañas -->
+                            <div class="tab-content" id="registroTabContent">
+                                <!-- Pestaña de propietario -->
+                                <div class="tab-pane fade show active" id="propietario" role="tabpanel" aria-labelledby="propietario-tab">
+                                    <h3 class="h4 mb-4">Información del Propietario</h3>
+                                    <form id="propietarioForm">
+                                        <div class="row g-3">
+                                            <!-- Nombre -->
+                                            <div class="col-md-6">
+                                                <label for="nombre" class="form-label required-field">Nombre</label>
+                                                <input type="text" class="form-control" id="nombre" required>
+                                            </div>
+                                            
+                                            <!-- Apellido -->
+                                            <div class="col-md-6">
+                                                <label for="apellido" class="form-label required-field">Apellido</label>
+                                                <input type="text" class="form-control" id="apellido" required>
+                                            </div>
+                                            
+                                            <!-- Email -->
+                                            <div class="col-md-6">
+                                                <label for="email" class="form-label required-field">Email</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                            
+                                            <!-- Teléfono -->
+                                            <div class="col-md-6">
+                                                <label for="telefono" class="form-label required-field">Teléfono</label>
+                                                <input type="tel" class="form-control" id="telefono" required>
+                                            </div>
+                                            
+                                            <!-- Dirección -->
+                                            <div class="col-12">
+                                                <label for="direccion" class="form-label required-field">Dirección</label>
+                                                <input type="text" class="form-control" id="direccion" required>
+                                            </div>
+                                            
+                                            <!-- Ciudad -->
+                                            <div class="col-md-6">
+                                                <label for="ciudad" class="form-label required-field">Ciudad</label>
+                                                <input type="text" class="form-control" id="ciudad" required>
+                                            </div>
+                                            
+                                            <!-- Código Postal -->
+                                            <div class="col-md-6">
+                                                <label for="codigoPostal" class="form-label required-field">Código Postal</label>
+                                                <input type="text" class="form-control" id="codigoPostal" required>
+                                            </div>
+                                            
+                                            <!-- Contacto de emergencia -->
+                                            <div class="col-12 mt-4">
+                                                <h4 class="h5 mb-3">Contacto de Emergencia</h4>
+                                            </div>
+                                            
+                                            <!-- Nombre del contacto -->
+                                            <div class="col-md-6">
+                                                <label for="nombreContacto" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="nombreContacto">
+                                            </div>
+                                            
+                                            <!-- Teléfono del contacto -->
+                                            <div class="col-md-6">
+                                                <label for="telefonoContacto" class="form-label">Teléfono</label>
+                                                <input type="tel" class="form-control" id="telefonoContacto">
+                                            </div>
+                                            
+                                            <!-- Botones de navegación -->
+                                            <div class="col-12 mt-4 d-flex justify-content-end">
+                                                <button type="button" class="btn btn-primary" id="propietarioNext">
+                                                    Siguiente <i class="fas fa-arrow-right ms-2"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                                <!-- Pestaña de mascota -->
+                                <div class="tab-pane fade" id="mascota" role="tabpanel" aria-labelledby="mascota-tab">
+                                    <h3 class="h4 mb-4">Información de la Mascota</h3>
+                                    <form id="mascotaForm">
+                                        <div class="row g-3">
+                                            <!-- Nombre de la mascota -->
+                                            <div class="col-md-6">
+                                                <label for="nombreMascota" class="form-label required-field">Nombre</label>
+                                                <input type="text" class="form-control" id="nombreMascota" required>
+                                            </div>
+                                            
+                                            <!-- Especie -->
+                                            <div class="col-md-6">
+                                                <label for="especie" class="form-label required-field">Especie</label>
+                                                <select class="form-select" id="especie" required>
+                                                    <option value="" selected disabled>Seleccionar especie</option>
+                                                    <option value="perro">Perro</option>
+                                                    <option value="gato">Gato</option>
+                                                    <option value="ave">Ave</option>
+                                                    <option value="roedor">Roedor</option>
+                                                    <option value="reptil">Reptil</option>
+                                                    <option value="otro">Otro</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <!-- Raza -->
+                                            <div class="col-md-6">
+                                                <label for="raza" class="form-label">Raza</label>
+                                                <input type="text" class="form-control" id="raza">
+                                            </div>
+                                            
+                                            <!-- Sexo -->
+                                            <div class="col-md-6">
+                                                <label for="sexo" class="form-label required-field">Sexo</label>
+                                                <select class="form-select" id="sexo" required>
+                                                    <option value="" selected disabled>Seleccionar sexo</option>
+                                                    <option value="macho">Macho</option>
+                                                    <option value="hembra">Hembra</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <!-- Fecha de nacimiento -->
+                                            <div class="col-md-6">
+                                                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                                                <input type="date" class="form-control" id="fechaNacimiento">
+                                            </div>
+                                            
+                                            <!-- Edad -->
+                                            <div class="col-md-6">
+                                                <label for="edad" class="form-label required-field">Edad</label>
+                                                <div class="input-group">
+                                                    <input type="number" class="form-control" id="edad" min="0" required>
+                                                    <select class="form-select" id="unidadEdad">
+                                                        <option value="años">Años</option>
+                                                        <option value="meses">Meses</option>
+                                                        <option value="semanas">Semanas</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Color -->
+                                            <div class="col-md-6">
+                                                <label for="color" class="form-label">Color</label>
+                                                <input type="text" class="form-control" id="color">
+                                            </div>
+                                            
+                                            <!-- Peso -->
+                                            <div class="col-md-6">
+                                                <label for="peso" class="form-label">Peso (kg)</label>
+                                                <input type="number" class="form-control" id="peso" step="0.1" min="0">
+                                            </div>
+                                            
+                                            <!-- Esterilizado/Castrado -->
+                                            <div class="col-md-6">
+                                                <label for="esterilizado" class="form-label required-field">Esterilizado/Castrado</label>
+                                                <select class="form-select" id="esterilizado" required>
+                                                    <option value="" selected disabled>Seleccionar opción</option>
+                                                    <option value="si">Sí</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <!-- Microchip -->
+                                            <div class="col-md-6">
+                                                <label for="microchip" class="form-label">Número de Microchip</label>
+                                                <input type="text" class="form-control" id="microchip">
+                                            </div>
+                                            
+                                            <!-- Foto de la mascota -->
+                                            <div class="col-12 mt-3">
+                                                <label for="fotoMascota" class="form-label">Foto de la Mascota</label>
+                                                <input type="file" class="form-control" id="fotoMascota" accept="image/*">
+                                            </div>
+                                            
+                                            <!-- Botones de navegación -->
+                                            <div class="col-12 mt-4 d-flex justify-content-between">
+                                                <button type="button" class="btn btn-outline-primary" id="mascotaPrev">
+                                                    <i class="fas fa-arrow-left me-2"></i> Anterior
+                                                </button>
+                                                <button type="button" class="btn btn-primary" id="mascotaNext">
+                                                    Siguiente <i class="fas fa-arrow-right ms-2"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                                <!-- Pestaña de salud -->
+                                <div class="tab-pane fade" id="salud" role="tabpanel" aria-labelledby="salud-tab">
+                                    <h3 class="h4 mb-4">Información de Salud</h3>
+                                    <form id="saludForm">
+                                        <div class="row g-3">
+                                            <!-- Alergias -->
+                                            <div class="col-12">
+                                                <label for="alergias" class="form-label">Alergias Conocidas</label>
+                                                <textarea class="form-control" id="alergias" rows="2"></textarea>
+                                            </div>
+                                            
+                                            <!-- Condiciones médicas -->
+                                            <div class="col-12">
+                                                <label for="condicionesMedicas" class="form-label">Condiciones Médicas Existentes</label>
+                                                <textarea class="form-control" id="condicionesMedicas" rows="2"></textarea>
+                                            </div>
+                                            
+                                            <!-- Medicamentos -->
+                                            <div class="col-12">
+                                                <label for="medicamentos" class="form-label">Medicamentos Actuales</label>
+                                                <textarea class="form-control" id="medicamentos" rows="2"></textarea>
+                                            </div>
+                                            
+                                            <!-- Dieta especial -->
+                                            <div class="col-12">
+                                                <label for="dietaEspecial" class="form-label">Dieta Especial</label>
+                                                <textarea class="form-control" id="dietaEspecial" rows="2"></textarea>
+                                            </div>
+                                            
+                                            <!-- Vacunas -->
+                                            <div class="col-12 mt-3">
+                                                <h4 class="h5 mb-3">Vacunas</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Vacuna</th>
+                                                                <th>Fecha</th>
+                                                                <th>Próxima Dosis</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control" placeholder="Nombre de la vacuna">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="date" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="date" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control" placeholder="Nombre de la vacuna">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="date" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="date" class="form-control">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    <button type="button" class="btn btn-sm btn-outline-primary">
+                                                                        <i class="fas fa-plus me-1"></i>Agregar vacuna
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Veterinario anterior -->
+                                            <div class="col-12 mt-3">
+                                                <h4 class="h5 mb-3">Veterinario Anterior (opcional)</h4>
+                                            </div>
+                                            
+                                            <!-- Nombre del veterinario -->
+                                            <div class="col-md-6">
+                                                <label for="nombreVeterinario" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="nombreVeterinario">
+                                            </div>
+                                            
+                                            <!-- Teléfono del veterinario -->
+                                            <div class="col-md-6">
+                                                <label for="telefonoVeterinario" class="form-label">Teléfono</label>
+                                                <input type="tel" class="form-control" id="telefonoVeterinario">
+                                            </div>
+                                            
+                                            <!-- Clínica -->
+                                            <div class="col-12">
+                                                <label for="clinica" class="form-label">Clínica</label>
+                                                <input type="text" class="form-control" id="clinica">
+                                            </div>
+                                            
+                                            <!-- Historial médico -->
+                                            <div class="col-12 mt-3">
+                                                <label for="historialMedico" class="form-label">Historial Médico Adicional</label>
+                                                <textarea class="form-control" id="historialMedico" rows="3"></textarea>
+                                            </div>
+                                            
+                                            <!-- Botones de navegación -->
+                                            <div class="col-12 mt-4 d-flex justify-content-between">
+                                                <button type="button" class="btn btn-outline-primary" id="saludPrev">
+                                                    <i class="fas fa-arrow-left me-2"></i> Anterior
+                                                </button>
+                                                <button type="button" class="btn btn-primary" id="saludNext">
+                                                    Siguiente <i class="fas fa-arrow-right ms-2"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                                <!-- Pestaña de confirmación -->
+                                <div class="tab-pane fade" id="confirmacion" role="tabpanel" aria-labelledby="confirmacion-tab">
+                                    <h3 class="h4 mb-4">Confirmación de Registro</h3>
+                                    
+                                    <div class="alert alert-info" role="alert">
+                                        <i class="fas fa-info-circle me-2"></i>Por favor revisa la información antes de enviar el formulario.
+                                    </div>
+                                    
+                                    <div class="row g-4">
+                                        <!-- Resumen del propietario -->
+                                        <div class="col-md-6">
+                                            <div class="card h-100">
+                                                <div class="card-header bg-light">
+                                                    <h4 class="h5 mb-0"><i class="fas fa-user me-2"></i>Propietario</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <dl class="row mb-0">
+                                                        <dt class="col-sm-4">Nombre:</dt>
+                                                        <dd class="col-sm-8" id="resumenNombre">-</dd>
+                                                        
+                                                        <dt class="col-sm-4">Email:</dt>
+                                                        <dd class="col-sm-8" id="resumenEmail">-</dd>
+                                                        
+                                                        <dt class="col-sm-4">Teléfono:</dt>
+                                                        <dd class="col-sm-8" id="resumenTelefono">-</dd>
+                                                        
+                                                        <dt class="col-sm-4">Dirección:</dt>
+                                                        <dd class="col-sm-8" id="resumenDireccion">-</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Resumen de la mascota -->
+                                        <div class="col-md-6">
+                                            <div class="card h-100">
+                                                <div class="card-header bg-light">
+                                                    <h4 class="h5 mb-0"><i class="fas fa-paw me-2"></i>Mascota</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <dl class="row mb-0">
+                                                        <dt class="col-sm-4">Nombre:</dt>
+                                                        <dd class="col-sm-8" id="resumenNombreMascota">-</dd>
+                                                        
+                                                        <dt class="col-sm-4">Especie:</dt>
+                                                        <dd class="col-sm-8" id="resumenEspecie">-</dd>
+                                                        
+                                                        <dt class="col-sm-4">Raza:</dt>
+                                                        <dd class="col-sm-8" id="resumenRaza">-</dd>
+                                                        
+                                                        <dt class="col-sm-4">Edad:</dt>
+                                                        <dd class="col-sm-8" id="resumenEdad">-</dd>
+                                                        
+                                                        <dt class="col-sm-4">Sexo:</dt>
+                                                        <dd class="col-sm-8" id="resumenSexo">-</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Términos y condiciones -->
+                                    <div class="form-check mt-4">
+                                        <input class="form-check-input" type="checkbox" id="terminos" required>
+                                        <label class="form-check-label" for="terminos">
+                                            Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a> de la Clínica Veterinaria PetCare.
+                                        </label>
+                                    </div>
+                                    
+                                    <!-- Botones de navegación -->
+                                    <div class="mt-4 d-flex justify-content-between">
+                                        <button type="button" class="btn btn-outline-primary" id="confirmacionPrev">
+                                            <i class="fas fa-arrow-left me-2"></i> Anterior
+                                        </button>
+                                        <button type="submit" class="btn btn-success" id="submitRegistro">
+                                            <i class="fas fa-check-circle me-2"></i> Completar Registro
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de ayuda -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="helpModalLabel">Preguntas Frecuentes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="accordion" id="accordionFAQ">
+                        <!-- Pregunta 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Por qué debo registrar a mi mascota?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Registrar a tu mascota en nuestro sistema te permite acceder a su historial médico completo, recibir recordatorios de vacunación, agendar citas más fácilmente y obtener recomendaciones personalizadas para su cuidado.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Qué información necesito para registrar a mi mascota?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Necesitarás información básica como tu nombre, dirección y datos de contacto, así como información sobre tu mascota como nombre, especie, raza, edad, sexo y cualquier información médica relevante como vacunas, alergias o condiciones médicas existentes.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Cómo puedo actualizar la información de mi mascota?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Una vez que hayas registrado a tu mascota, puedes actualizar su información en cualquier momento iniciando sesión en tu cuenta y accediendo a la sección "Mi Perfil" o "Mis Mascotas".
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    ¿Es segura la información que proporciono?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    Sí, toda la información que proporcionas es confidencial y está protegida por nuestras políticas de privacidad. Utilizamos sistemas de seguridad avanzados para proteger tus datos personales y los de tu mascota.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Clínica Veterinaria PetCare</h5>
+                    <p>Brindando el mejor cuidado veterinario para tus mascotas desde 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="servicios.html" class="text-white text-decoration-none">Servicios</a></li>
+                        <li><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="citas.html" class="text-white text-decoration-none">Agendar Cita</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Horario de Atención</h5>
+                    <ul class="list-unstyled">
+                        <li>Lunes - Viernes: 8:00 AM - 7:00 PM</li>
+                        <li>Sábados: 9:00 AM - 5:00 PM</li>
+                        <li>Domingos: 10:00 AM - 2:00 PM</li>
+                    </ul>
+                    <p class="mt-3">
+                        <i class="fas fa-phone me-2"></i> (123) 456-7890<br>
+                        <i class="fas fa-envelope me-2"></i> info@petcare.com
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Clínica Veterinaria PetCare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="js/scripts.js"></script>
+    <script src="js/validaciones.js"></script>
+    
+    <!-- Script para la navegación entre pestañas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navegación entre pestañas
+            const propietarioNext = document.getElementById('propietarioNext');
+            const mascotaPrev = document.getElementById('mascotaPrev');
+            const mascotaNext = document.getElementById('mascotaNext');
+            const saludPrev = document.getElementById('saludPrev');
+            const saludNext = document.getElementById('saludNext');
+            const confirmacionPrev = document.getElementById('confirmacionPrev');
+            
+            // Pestañas
+            const propietarioTab = new bootstrap.Tab(document.getElementById('propietario-tab'));
+            const mascotaTab = new bootstrap.Tab(document.getElementById('mascota-tab'));
+            const saludTab = new bootstrap.Tab(document.getElementById('salud-tab'));
+            const confirmacionTab = new bootstrap.Tab(document.getElementById('confirmacion-tab'));
+            
+            // Navegación hacia adelante
+            propietarioNext.addEventListener('click', function() {
+                mascotaTab.show();
+            });
+            
+            mascotaNext.addEventListener('click', function() {
+                saludTab.show();
+            });
+            
+            saludNext.addEventListener('click', function() {
+                // Aquí se podría agregar lógica para llenar el resumen
+                confirmacionTab.show();
+            });
+            
+            // Navegación hacia atrás
+            mascotaPrev.addEventListener('click', function() {
+                propietarioTab.show();
+            });
+            
+            saludPrev.addEventListener('click', function() {
+                mascotaTab.show();
+            });
+            
+            confirmacionPrev.addEventListener('click', function() {
+                saludTab.show();
+            });
+            
+            // Envío del formulario
+            const submitRegistro = document.getElementById('submitRegistro');
+            submitRegistro.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('¡Registro completado con éxito!');
+                // Aquí iría la lógica para enviar el formulario
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinaria PetCare - Servicios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="fas fa-paw me-2"></i> <span>PetCare</span>
+                </a>
+            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sistema
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="registro-mascota.html">Registro de Mascota</a></li>
+                                <li><a class="dropdown-item" href="historial-medico.html">Historial Médico</a></li>
+                                <li><a class="dropdown-item" href="inventario.html">Inventario</a></li>
+                                <li><a class="dropdown-item" href="pagos.html">Pagos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-dark btn-sm ms-lg-2 px-3" href="citas.html">Agendar Cita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-user me-1"></i>Iniciar Sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Encabezado de página -->
+    <header class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Nuestros Servicios</h1>
+                    <p class="lead">Ofrecemos una amplia gama de servicios veterinarios para garantizar la salud y el bienestar de tu mascota.</p>
+                    <a href="citas.html" class="btn btn-primary btn-lg mt-3">
+                        <i class="fas fa-calendar-check me-2"></i>Agendar Cita
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/servicios-vete.jpg" alt="Veterinario atendiendo mascota" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>   
+
+    <!-- Servicios principales -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Servicios Médicos</h2>
+            <div class="row g-4">
+                <!-- Consulta general -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-stethoscope fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h4">Consulta General</h3>
+                            <p class="card-text">Evaluación completa del estado de salud de tu mascota, incluyendo examen físico, revisión de signos vitales y recomendaciones para su cuidado.</p>
+                            <hr class="my-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Desde $35</span>
+                                <a href="citas.html" class="btn btn-outline-primary">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vacunación -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-syringe fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h4">Vacunación</h3>
+                            <p class="card-text">Programa completo de vacunación para perros, gatos y otras mascotas. Incluye vacunas esenciales y opcionales según las necesidades específicas.</p>
+                            <hr class="my-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Desde $25</span>
+                                <a href="citas.html" class="btn btn-outline-primary">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cirugía -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-cut fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h4">Cirugía</h3>
+                            <p class="card-text">Procedimientos quirúrgicos realizados por veterinarios especializados, desde cirugías de rutina como esterilización hasta intervenciones más complejas.</p>
+                            <hr class="my-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Desde $150</span>
+                                <a href="citas.html" class="btn btn-outline-primary">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Laboratorio -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-flask fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h4">Laboratorio Clínico</h3>
+                            <p class="card-text">Análisis de sangre, orina, heces y otros estudios para diagnóstico preciso. Resultados rápidos gracias a nuestro laboratorio interno.</p>
+                            <hr class="my-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Desde $45</span>
+                                <a href="citas.html" class="btn btn-outline-primary">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Imagenología -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-x-ray fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h4">Imagenología</h3>
+                            <p class="card-text">Servicios de radiografía, ecografía y otros estudios de imagen para diagnóstico preciso de lesiones, fracturas y condiciones internas.</p>
+                            <hr class="my-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Desde $80</span>
+                                <a href="citas.html" class="btn btn-outline-primary">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Odontología -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <i class="fas fa-tooth fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h4">Odontología</h3>
+                            <p class="card-text">Limpieza dental, extracciones y tratamiento de enfermedades bucales. Mantenemos la salud dental de tu mascota para prevenir problemas mayores.</p>
+                            <hr class="my-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">Desde $75</span>
+                                <a href="citas.html" class="btn btn-outline-primary">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios adicionales -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Servicios Adicionales</h2>
+            <div class="row g-4">
+                <!-- Peluquería -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 70px; height: 70px;">
+                                <i class="fas fa-cut fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h5">Peluquería</h3>
+                            <p class="card-text">Baño, corte, cepillado y estilismo para mantener a tu mascota limpia y con un aspecto saludable.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center p-4 pt-0">
+                            <a href="citas.html" class="btn btn-outline-primary">Agendar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tienda de productos -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 70px; height: 70px;">
+                                <i class="fas fa-shopping-bag fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h5">Tienda de Productos</h3>
+                            <p class="card-text">Alimentos premium, medicamentos, accesorios y todo lo necesario para el cuidado de tu mascota.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center p-4 pt-0">
+                            <a href="#" class="btn btn-outline-primary">Ver Productos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hospedaje -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 70px; height: 70px;">
+                                <i class="fas fa-home fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h5">Hospedaje</h3>
+                            <p class="card-text">Cuidamos de tu mascota cuando no puedes hacerlo, ofreciéndole un ambiente seguro y confortable.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center p-4 pt-0">
+                            <a href="contacto.html" class="btn btn-outline-primary">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Planes de salud -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4" style="width: 70px; height: 70px;">
+                                <i class="fas fa-heartbeat fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="card-title h5">Planes de Salud</h3>
+                            <p class="card-text">Programas de prevención y mantenimiento para garantizar la salud de tu mascota a largo plazo.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center p-4 pt-0">
+                            <a href="contacto.html" class="btn btn-outline-primary">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestras Especialidades</h2>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="img/especialistas-veterinarios.jpg" alt="Equipo de especialistas veterinarios" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3">
+                                        <i class="fas fa-heart fa-2x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5">Cardiología</h3>
+                                    <p class="mb-0">Diagnóstico y tratamiento de enfermedades cardíacas en mascotas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3">
+                                        <i class="fas fa-bone fa-2x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5">Traumatología</h3>
+                                    <p class="mb-0">Tratamiento de fracturas, lesiones articulares y problemas óseos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3">
+                                        <i class="fas fa-brain fa-2x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5">Neurología</h3>
+                                    <p class="mb-0">Diagnóstico y tratamiento de trastornos del sistema nervioso.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3">
+                                        <i class="fas fa-eye fa-2x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5">Oftalmología</h3>
+                                    <p class="mb-0">Cuidado y tratamiento de enfermedades oculares en mascotas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3">
+                                        <i class="fas fa-allergies fa-2x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5">Dermatología</h3>
+                                    <p class="mb-0">Diagnóstico y tratamiento de problemas de piel y alergias.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-3">
+                                        <i class="fas fa-paw fa-2x text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5">Oncología</h3>
+                                    <p class="mb-0">Tratamiento especializado para mascotas con cáncer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Lo que dicen nuestros clientes</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="img-placeholder" style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                        <img src="avatar.jpg" alt="Foto de perfil" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5 mb-0">María García</h3>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                "Excelente atención para mi gata Luna. El Dr. Martínez fue muy amable y profesional. Recomiendo ampliamente esta clínica veterinaria."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="img-placeholder" style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                        <img src="testimonio-gata.jpg" alt="Foto de perfil" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5 mb-0">Carlos Rodríguez</h3>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                "Mi perro Rocky recibió un tratamiento excelente. El personal es muy atento y las instalaciones están impecables. Definitivamente volveremos."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-4">
+                                <div class="flex-shrink-0">
+                                    <div class="img-placeholder" style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                        <img src="avatar.jpg" alt="Foto de perfil" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h5 mb-0">Ana Martínez</h3>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                "La cirugía de mi mascota fue un éxito gracias al equipo de PetCare. Estoy muy agradecida por su profesionalismo y dedicación."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="py-5 bg-light text-black">
+        <div class="container text-center">
+            <h2 class="mb-4">¿Listo para agendar una cita?</h2>
+            <p class="lead mb-4">Programa una consulta para tu mascota y déjala en manos de nuestros expertos veterinarios.</p>
+            <a href="citas.html" class="btn btn-light btn-lg">
+                <i class="fas fa-calendar-check me-2"></i>Agendar Cita
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Clínica Veterinaria PetCare</h5>
+                    <p>Brindando el mejor cuidado veterinario para tus mascotas desde 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="servicios.html" class="text-white text-decoration-none">Servicios</a></li>
+                        <li><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        <li><a href="citas.html" class="text-white text-decoration-none">Agendar Cita</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Horario de Atención</h5>
+                    <ul class="list-unstyled">
+                        <li>Lunes - Viernes: 8:00 AM - 7:00 PM</li>
+                        <li>Sábados: 9:00 AM - 5:00 PM</li>
+                        <li>Domingos: 10:00 AM - 2:00 PM</li>
+                    </ul>
+                    <p class="mt-3">
+                        <i class="fas fa-phone me-2"></i> (123) 456-7890<br>
+                        <i class="fas fa-envelope me-2"></i> info@petcare.com
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Clínica Veterinaria PetCare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

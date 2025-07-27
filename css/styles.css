@@ -1,0 +1,476 @@
+/* 
+* Estilos personalizados para Clínica Veterinaria PetCare
+* Autor: [Tu Nombre]
+* Fecha: 27/04/2025
+* Versión: 1.0
+*/
+
+:root {
+    --primary: none;
+    --primary-dark: none;
+    --secondary: #6c757d98;
+    --success: #198754;
+    --info: transparent;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+/* Aplicar fondo degradado y textura */
+body {
+    background: none;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><text x="10" y="40" font-size="50" fill="rgba(255,255,255,0.1)">🐾</text></svg>');
+    background-repeat: repeat;
+    background-size: 150px;
+    font-family: 'Roboto', sans-serif;
+    color: none;
+    background-color: whitesmoke;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centra el texto dentro del header */
+   
+  }
+
+  h1 {
+    margin: 0; /* Elimina el margen predeterminado */
+  }
+  
+  button {
+    margin: 0 10px; /* Añade un margen horizontal para separar los botones */
+  }
+
+  nav.navbar {
+    display: flex;
+    justify-content: center; /* Centra la barra de navegación */
+}
+
+  
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+
+head {
+    background: none;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><text x="10" y="40" font-size="50" fill="rgba(255,255,255,0.1)">🐾</text></svg>');
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-blend-mode: color-burn;
+    background-color: none;
+
+}
+
+.container {
+    background: none;
+    container-type: scroll-state;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><text x="10" y="40" font-size="50" fill="rgba(255,255,255,0.1)">🐾</text></svg>');
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    max-width: fill;
+    margin: 10 auto; /* Centra el contenedor */
+    padding: 50px;
+    border-radius: 12px;
+    
+}
+
+  
+.bg-primary{
+    background-color: transparent;
+}
+.bg.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color:transparent;
+}
+
+/* Estilos para placeholders de imágenes */
+.img-placeholder {
+    background-color: #e9ecef;
+    border: 1px dashed #adb5bd;
+    padding: 20px;
+    text-align: center;
+    color: #6c757d;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Estilos para secciones */
+/* Estilos para la sección hero */
+.hero-section {
+    position: relative;
+    padding: 80px 20px; /* Ajuste del espaciado */
+    text-align: center;
+    background-color: transparent; /* Azul degradado */
+    color: white;
+    overflow: hidden;
+}
+
+.hero-section .container {
+    max-width: 1024px;
+    margin: auto;
+    padding: 90px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+} 
+/* Título */
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Subtítulo */
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Botón */
+.hero-section .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    background: white;
+    color: #306aad;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.hero-section .btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #2c3e50;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Estilos para tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: small;
+    font-style: normal;
+    background-color: rgb(224, 229, 230)
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Estilos para formularios */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.required-field::after {
+    content: "*";
+    color: var(--danger);
+    margin-left: 4px;
+}
+
+/* Estilos para tablas */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table th {
+    background-color: var(--light);
+    font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 109, 253, 0.5);
+}
+.icon-box
+
+/* Estilos para alertas de stock */
+.stock-alert {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.stock-warning {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+.stock-ok {
+    color: var(--success);
+}
+
+/* Estilos para login */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgb(36, 80, 121);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*mapa */
+.google-map {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-map iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* Estilos para la sección de preguntas frecuentes */
+.py-5 {
+    
+    padding: 5rem 0;
+}
+
+/* Contenedor principal */
+.container {
+  
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Acordeón */
+.accordion-item {
+    background: rgba(255, 255, 255, 0.6); /* Fondo translúcido */
+    border-radius: 8px;
+    border: none;
+}
+
+/* Botones del acordeón */
+.accordion-button {
+    background: rgba(157, 193, 229, 0.7); /* Tono azul-gris claro */
+    color: #333;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(140, 160, 180, 0.8);
+    color: #ffffff;
+}
+/* Estilo general de la sección */
+.py-5 {
+  
+    padding: 5rem 0;
+}
+
+/* Contenedor principal */
+.container {
+
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color:none; /* O el color que prefieras */
+    
+    
+}
+/*menu desplegable*/
+.dropdown-menu {
+    background-color: #95c0ebbe; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.212); /* Sombra elegante */
+}
+
+/* Estilo para los elementos del menú */
+.dropdown-item {
+    color: #333; /* Color del texto */
+    font-weight: normal;/* Negrita para destacar */
+    transition: background-color 0.5s; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor */
+.dropdown-item:hover {
+    background-color: #0c3663d0; /* Color azul al pasar el mouse */
+    color: rgb(150, 216, 241); /* Texto en blanco */
+}
+/* Tarjeta */
+.card {
+    background: rgba(162, 208, 238, 0.568); /* Azul claro */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Imagen lateral */
+.bg-primary {
+    background: linear-gradient(235deg, #76a7df, #4a8ebb63); /* Azul más claro */
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+/* Texto en el área azul */
+.bg-primary h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.bg-primary p {
+    font-size: 1rem;
+}
+
+/* Botón */
+.btn-outline-light {
+    border: 2px solid white;
+    color: rgb(15, 72, 99);
+}
+
+.btn-outline-light:hover {
+    background: rgb(66, 167, 235);
+    color: #b6d5f875;
+    border-color: #4A90E2;
+}
+.btn-outline-dark {
+    color: rgb(250, 244, 244) !important; /* Forzar el color negro en el texto */
+    border: 2px solid white;
+}
+
+
+/* Cuerpo del acordeón */
+.accordion-body {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Ajustes generales */
+h2 {
+    color: #2c3e50;
+    font-weight: bold;
+}
+/* Estilos para dashboard */
+.dashboard-card {
+    border-left: 4px solid var(--primary);
+}
+
+/* Estilos para footer */
+footer {
+    margin-top: auto;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1024
+) {
+    .hero-section {
+        padding: 40px 0;
+        color: none; 
+    }
+    
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 30px 0;
+    }
+    
+    h1.display-4 {
+        font-size: 2rem;
+    }
+}
+
+.carousel {
+    max-width: 1024px; /* Limita el ancho del carrusel */
+    margin: auto; /* Centra el carrusel en la página */
+    border-radius: 10px; /* Bordes redondeados */
+    
+}
+
+.carousel-item img {
+    width: 100%; /* Ajusta el ancho al contenedor */
+    max-height: 300px; /* Establece una altura máxima */
+    object-fit: cover; /* Mantiene la proporción sin deformar */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+  
+}
+
+/* Efecto de zoom leve en la imagen cuando es activa */
+.carousel-item.active img {
+    transform: scale(1.05);
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: rgb(25, 97, 204);
+    background-color: #5396ddbd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:  0.5s ease;
+    text-decoration-color: #121212;
+}
+
+.btn:hover {
+    background-color: #0576eefd;
+}
+
+

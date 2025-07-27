@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinaria PetCare - Pagos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="fas fa-paw me-2"></i> <span>PetCare</span>
+                </a>
+            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sistema
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="registro-mascota.html">Registro de Mascota</a></li>
+                                <li><a class="dropdown-item" href="historial-medico.html">Historial Médico</a></li>
+                                <li><a class="dropdown-item" href="inventario.html">Inventario</a></li>
+                                <li><a class="dropdown-item" href="pagos.html">Pagos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-dark btn-sm ms-lg-2 px-3" href="citas.html">Agendar Cita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-user me-1"></i>Iniciar Sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Encabezado de página -->
+    <header class="bg-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Pagos</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-5 fw-bold">Gestión de Pagos</h1>
+                    <p class="lead">Administra los pagos, facturas y transacciones de la clínica veterinaria.</p>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="img/pagos-clinica.jpg" alt="Pagos en clínica veterinaria" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- Panel de control -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Ingresos del día -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm dashboard-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Ingresos Hoy</h6>
+                                    <h3 class="mb-0">$1,250</h3>
+                                </div>
+                                <div class="icon-box">
+                                    <i class="fas fa-dollar-sign fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Facturas pendientes -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm dashboard-card" style="border-left-color: #ffc107 !important;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Facturas Pendientes</h6>
+                                    <h3 class="mb-0">8</h3>
+                                </div>
+                                <div class="icon-box" style="background-color: rgba(255, 193, 7, 0.1);">
+                                    <i class="fas fa-file-invoice-dollar fa-2x text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               <!-- Pagos del mes -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm dashboard-card" style="border-left-color: #198754 !important;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Ingresos del Mes</h6>
+                                    <h3 class="mb-0">$28,450</h3>
+                                </div>
+                                <div class="icon-box" style="background-color: rgba(25, 135, 84, 0.1);">
+                                    <i class="fas fa-chart-line fa-2x text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               <!-- Transacciones -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm dashboard-card" style="border-left-color: #0d6efd !important;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Transacciones</h6>
+                                    <h3 class="mb-0">145</h3>
+                                </div>
+                                <div class="icon-box" style="background-color: rgba(13, 110, 253, 0.1);">
+                                    <i class="fas fa-exchange-alt fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Contenido principal -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Filtros y acciones -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h2 class="h5 mb-0">Filtros</h2>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Búsqueda -->
+                            <div class="mb-4">
+                                <label for="searchPayment" class="form-label">Buscar factura</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchPayment" placeholder="Número o cliente...">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Rango de fechas -->
+                            <div class="mb-3">
+                                <label class="form-label">Rango de fechas</label>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="date" class="form-control" id="startDate">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="date" class="form-control" id="endDate">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Estado de pago -->
+                            <div class="mb-3">
+                                <label for="paymentStatus" class="form-label">Estado</label>
+                                <select class="form-select" id="paymentStatus">
+                                    <option value="" selected>Todos</option>
+                                    <option value="pagado">Pagado</option>
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="anulado">Anulado</option>
+                                </select>
+                            </div>
+                            
+                           <!-- Método de pago -->
+                            <div class="mb-3">
+                                <label for="paymentMethod" class="form-label">Método de pago</label>
+                                <select class="form-select" id="paymentMethod">
+                                    <option value="" selected>Todos</option>
+                                    <option value="efectivo">Efectivo</option>
+                                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                                    <option value="transferencia">Transferencia bancaria</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Botones de acción -->
+                            <div class="d-grid gap-2 mt-4">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-filter me-2"></i>Aplicar Filtros
+                                </button>
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-redo me-2"></i>Restablecer
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   <!-- Acciones rápidas -->
+                    <div class="card border-0 shadow-sm mt-4">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h2 class="h5 mb-0">Acciones Rápidas</h2>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#newInvoiceModal">
+                                    <i class="fas fa-plus me-2"></i>Nueva Factura
+                                </button>
+                                <button class="btn btn-info text-white" type="button">
+                                    <i class="fas fa-file-export me-2"></i>Exportar Reporte
+                                </button>
+                                <button class="btn btn-warning text-dark" type="button">
+                                    <i class="fas fa-print me-2"></i>Imprimir Cierre
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tabla de pagos -->
+                <div class="col-lg-9">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3 d-flex justify-content-between align-items-center">
+                            <h2 class="h5 mb-0">Listado de Facturas</h2>
+                            <div>
+                                <button class="btn btn-sm btn-light me-2">
+                                    <i class="fas fa-sort-amount-down me-1"></i>Ordenar
+                                </button>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-light active">
+                                        <i class="fas fa-table"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-light">
+                                        <i class="fas fa-th-large"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">Nº Factura</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Cliente</th>
+                                            <th scope="col">Mascota</th>
+                                            <th scope="col">Total</th>
+                                            <th scope="col">Estado</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Factura 1 -->
+                                        <tr>
+                                            <td>F-2023-001</td>
+                                            <td>15/04/2023</td>
+                                            <td>Juan Pérez</td>
+                                            <td>Max</td>
+                                            <td>$85.50</td>
+                                            <td><span class="badge bg-success">Pagado</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="tooltip" title="Ver detalles">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary me-1" data-bs-toggle="tooltip" title="Imprimir">
+                                                    <i class="fas fa-print"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" title="Anular">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- Factura 2 -->
+                                        <tr>
+                                            <td>F-2023-002</td>
+                                            <td>15/04/2023</td>
+                                            <td>María García</td>
+                                            <td>Luna</td>
+                                            <td>$120.00</td>
+                                            <td><span class="badge bg-success">Pagado</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="tooltip" title="Ver detalles">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary me-1" data-bs-toggle="tooltip" title="Imprimir">
+                                                    <i class="fas fa-print"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" title="Anular">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- Factura 3 -->
+                                        <tr>
+                                            <td>F-2023-003</td>
+                                            <td>16/04/2023</td>
+                                            <td>Carlos Rodríguez</td>
+                                            <td>Rocky</td>
+                                            <td>$45.75</td>
+                                            <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="tooltip" title="Ver detalles">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-success me-1" data-bs-toggle="tooltip" title="Registrar pago">
+                                                    <i class="fas fa-check"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" title="Anular">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- Factura 4 -->
+                                        <tr>
+                                            <td>F-2023-004</td>
+                                            <td>16/04/2023</td>
+                                            <td>Ana Martínez</td>
+                                            <td>Milo</td>
+                                            <td>$95.25</td>
+                                            <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="tooltip" title="Ver detalles">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-success me-1" data-bs-toggle="tooltip" title="Registrar pago">
+                                                    <i class="fas fa-check"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="tooltip" title="Anular">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                       <!-- Factura 5 -->
+                                        <tr>
+                                            <td>F-2023-005</td>
+                                            <td>17/04/2023</td>
+                                            <td>Pedro López</td>
+                                            <td>Toby</td>
+                                            <td>$150.00</td>
+                                            <td><span class="badge bg-danger">Anulado</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="tooltip" title="Ver detalles">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary me-1" data-bs-toggle="tooltip" title="Imprimir">
+                                                    <i class="fas fa-print"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary" disabled data-bs-toggle="tooltip" title="Anular">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white py-3">
+                            <nav aria-label="Paginación de facturas">
+                                <ul class="pagination justify-content-center mb-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Siguiente</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Modal para nueva factura -->
+    <div class="modal fade" id="newInvoiceModal" tabindex="-1" aria-labelledby="newInvoiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="newInvoiceModalLabel">Nueva Factura</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newInvoiceForm">
+                        <div class="row g-3">
+                            <!-- Información del cliente -->
+                            <div class="col-12">
+                                <h6 class="fw-bold">Información del Cliente</h6>
+                            </div>
+                            
+                            <!-- Buscar cliente -->
+                            <div class="col-12 mb-3">
+                                <label for="searchClient" class="form-label">Buscar cliente</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchClient" placeholder="Nombre, ID o teléfono...">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                           <!-- Nombre del cliente -->
+                            <div class="col-md-6">
+                                <label for="clientName" class="form-label required-field">Nombre</label>
+                                <input type="text" class="form-control" id="clientName" required>
+                            </div>
+                            
+                           <!-- Teléfono -->
+                            <div class="col-md-6">
+                                <label for="clientPhone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="clientPhone">
+                            </div>
+                            
+                            <!-- Mascota -->
+                            <div class="col-md-6">
+                                <label for="petName" class="form-label required-field">Mascota</label>
+                                <select class="form-select" id="petName" required>
+                                    <option value="" selected disabled>Seleccionar mascota</option>
+                                    <option value="1">Max</option>
+                                    <option value="2">Luna</option>
+                                    <option value="3">Rocky</option>
+                                </select>
+                            </div>
+                            
+                         <!-- Fecha -->
+                            <div class="col-md-6">
+                                <label for="invoiceDate" class="form-label required-field">Fecha</label>
+                                <input type="date" class="form-control" id="invoiceDate" required>
+                            </div>
+                            
+                            <!-- Detalles de la factura -->
+                            <div class="col-12 mt-3">
+                                <h6 class="fw-bold">Detalles de la Factura</h6>
+                            </div>
+                            
+                            <!-- Tabla de items -->
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Descripción</th>
+                                                <th width="100">Cantidad</th>
+                                                <th width="120">Precio</th>
+                                                <th width="120">Subtotal</th>
+                                                <th width="50"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select class="form-select">
+                                                        <option value="" selected disabled>Seleccionar servicio</option>
+                                                        <option value="consulta">Consulta general</option>
+                                                        <option value="vacuna">Vacunación</option>
+                                                        <option value="desparasitacion">Desparasitación</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type="number" class="form-control" value="1" min="1">
+                                                </td>
+                                                <td>
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">$</span>
+                                                        <input type="number" class="form-control" value="35.00" step="0.01" min="0">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">$</span>
+                                                        <input type="text" class="form-control" value="35.00" readonly>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-sm btn-outline-danger">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="5">
+                                                    <button type="button" class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-plus me-1"></i>Agregar ítem
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- Totales -->
+                            <div class="col-12">
+                                <div class="row justify-content-end">
+                                    <div class="col-md-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span>Subtotal:</span>
+                                                    <span>$35.00</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span>IVA (16%):</span>
+                                                    <span>$5.60</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span>Descuento:</span>
+                                                    <div class="input-group input-group-sm" style="width: 100px;">
+                                                        <span class="input-group-text">$</span>
+                                                        <input type="number" class="form-control" value="0.00" step="0.01" min="0">
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex justify-content-between fw-bold">
+                                                    <span>Total:</span>
+                                                    <span>$40.60</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Método de pago -->
+                            <div class="col-12 mt-3">
+                                <h6 class="fw-bold">Información de Pago</h6>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="paymentMethod" class="form-label required-field">Método de pago</label>
+                                <select class="form-select" id="paymentMethod" required>
+                                    <option value="" selected disabled>Seleccionar método</option>
+                                    <option value="efectivo">Efectivo</option>
+                                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                                    <option value="transferencia">Transferencia bancaria</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="paymentStatus" class="form-label required-field">Estado de pago</label>
+                                <select class="form-select" id="paymentStatus" required>
+                                    <option value="pagado">Pagado</option>
+                                    <option value="pendiente">Pendiente</option>
+                                </select>
+                            </div>
+                            
+                           <!-- Observaciones -->
+                            <div class="col-12">
+                                <label for="invoiceNotes" class="form-label">Observaciones</label>
+                                <textarea class="form-control" id="invoiceNotes" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar Factura</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Footer -->
+   <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="mb-3">Clínica Veterinaria PetCare</h5>
+                <p>Brindando el mejor cuidado veterinario para tus mascotas desde 2010.</p>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="mb-3">Enlaces Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                    <li><a href="servicios.html" class="text-white text-decoration-none">Servicios</a></li>
+                    <li><a href="nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                    <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                    <li><a href="citas.html" class="text-white text-decoration-none">Agendar Cita</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="mb-3">Horario de Atención</h5>
+                <ul class="list-unstyled">
+                    <li>Lunes - Viernes: 8:00 AM - 7:00 PM</li>
+                    <li>Sábados: 9:00 AM - 5:00 PM</li>
+                    <li>Domingos: 10:00 AM - 2:00 PM</li>
+                </ul>
+                <p class="mt-3">
+                    <i class="fas fa-phone me-2"></i> (123) 456-7890<br>
+                    <i class="fas fa-envelope me-2"></i> info@petcare.com
+                </p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2025 Clínica Veterinaria PetCare. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+        
